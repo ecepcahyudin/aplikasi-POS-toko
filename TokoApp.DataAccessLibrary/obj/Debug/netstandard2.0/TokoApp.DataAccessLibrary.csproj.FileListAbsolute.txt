@@ -1,0 +1,12 @@
+E:\Ecep\Toko\Toko\TokoApp.DataAccessLibrary\bin\Debug\netstandard2.0\TokoApp.DataAccessLibrary.deps.json
+E:\Ecep\Toko\Toko\TokoApp.DataAccessLibrary\bin\Debug\netstandard2.0\TokoApp.DataAccessLibrary.dll
+E:\Ecep\Toko\Toko\TokoApp.DataAccessLibrary\bin\Debug\netstandard2.0\TokoApp.DataAccessLibrary.pdb
+E:\Ecep\Toko\Toko\TokoApp.DataAccessLibrary\bin\Debug\netstandard2.0\TokoApp.Shared.dll
+E:\Ecep\Toko\Toko\TokoApp.DataAccessLibrary\bin\Debug\netstandard2.0\TokoApp.Shared.pdb
+E:\Ecep\Toko\Toko\TokoApp.DataAccessLibrary\obj\Debug\netstandard2.0\TokoApp.DataAccessLibrary.csprojAssemblyReference.cache
+E:\Ecep\Toko\Toko\TokoApp.DataAccessLibrary\obj\Debug\netstandard2.0\TokoApp.DataAccessLibrary.AssemblyInfoInputs.cache
+E:\Ecep\Toko\Toko\TokoApp.DataAccessLibrary\obj\Debug\netstandard2.0\TokoApp.DataAccessLibrary.AssemblyInfo.cs
+E:\Ecep\Toko\Toko\TokoApp.DataAccessLibrary\obj\Debug\netstandard2.0\TokoApp.DataAccessLibrary.csproj.CoreCompileInputs.cache
+E:\Ecep\Toko\Toko\TokoApp.DataAccessLibrary\obj\Debug\netstandard2.0\TokoApp.DataAccessLibrary.csproj.CopyComplete
+E:\Ecep\Toko\Toko\TokoApp.DataAccessLibrary\obj\Debug\netstandard2.0\TokoApp.DataAccessLibrary.dll
+E:\Ecep\Toko\Toko\TokoApp.DataAccessLibrary\obj\Debug\netstandard2.0\TokoApp.DataAccessLibrary.pdb

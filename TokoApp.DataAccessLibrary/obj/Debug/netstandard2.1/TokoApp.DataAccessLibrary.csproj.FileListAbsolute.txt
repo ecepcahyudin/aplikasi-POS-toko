@@ -1,0 +1,24 @@
+E:\Ecep\Toko\Toko\TokoApp.DataAccessLibrary\bin\Debug\netstandard2.1\TokoApp.DataAccessLibrary.deps.json
+E:\Ecep\Toko\Toko\TokoApp.DataAccessLibrary\bin\Debug\netstandard2.1\TokoApp.DataAccessLibrary.dll
+E:\Ecep\Toko\Toko\TokoApp.DataAccessLibrary\bin\Debug\netstandard2.1\TokoApp.DataAccessLibrary.pdb
+E:\Ecep\Toko\Toko\TokoApp.DataAccessLibrary\obj\Debug\netstandard2.1\TokoApp.DataAccessLibrary.csprojAssemblyReference.cache
+E:\Ecep\Toko\Toko\TokoApp.DataAccessLibrary\obj\Debug\netstandard2.1\TokoApp.DataAccessLibrary.AssemblyInfoInputs.cache
+E:\Ecep\Toko\Toko\TokoApp.DataAccessLibrary\obj\Debug\netstandard2.1\TokoApp.DataAccessLibrary.AssemblyInfo.cs
+E:\Ecep\Toko\Toko\TokoApp.DataAccessLibrary\obj\Debug\netstandard2.1\TokoApp.DataAccessLibrary.csproj.CoreCompileInputs.cache
+E:\Ecep\Toko\Toko\TokoApp.DataAccessLibrary\obj\Debug\netstandard2.1\TokoApp.DataAccessLibrary.dll
+E:\Ecep\Toko\Toko\TokoApp.DataAccessLibrary\obj\Debug\netstandard2.1\TokoApp.DataAccessLibrary.pdb
+E:\Ecep\Toko\Toko\TokoApp.DataAccessLibrary\bin\Debug\netstandard2.1\TokoApp.Shared.dll
+E:\Ecep\Toko\Toko\TokoApp.DataAccessLibrary\bin\Debug\netstandard2.1\TokoApp.Shared.pdb
+E:\Ecep\Toko\Toko\TokoApp.DataAccessLibrary\obj\Debug\netstandard2.1\TokoApp.DataAccessLibrary.csproj.CopyComplete
+E:\Ecep\Project\Projek C#\Blazor\Toko\Toko\TokoApp.DataAccessLibrary\bin\Debug\netstandard2.1\TokoApp.DataAccessLibrary.deps.json
+E:\Ecep\Project\Projek C#\Blazor\Toko\Toko\TokoApp.DataAccessLibrary\bin\Debug\netstandard2.1\TokoApp.DataAccessLibrary.dll
+E:\Ecep\Project\Projek C#\Blazor\Toko\Toko\TokoApp.DataAccessLibrary\bin\Debug\netstandard2.1\TokoApp.DataAccessLibrary.pdb
+E:\Ecep\Project\Projek C#\Blazor\Toko\Toko\TokoApp.DataAccessLibrary\bin\Debug\netstandard2.1\TokoApp.Shared.dll
+E:\Ecep\Project\Projek C#\Blazor\Toko\Toko\TokoApp.DataAccessLibrary\bin\Debug\netstandard2.1\TokoApp.Shared.pdb
+E:\Ecep\Project\Projek C#\Blazor\Toko\Toko\TokoApp.DataAccessLibrary\obj\Debug\netstandard2.1\TokoApp.DataAccessLibrary.csprojAssemblyReference.cache
+E:\Ecep\Project\Projek C#\Blazor\Toko\Toko\TokoApp.DataAccessLibrary\obj\Debug\netstandard2.1\TokoApp.DataAccessLibrary.AssemblyInfoInputs.cache
+E:\Ecep\Project\Projek C#\Blazor\Toko\Toko\TokoApp.DataAccessLibrary\obj\Debug\netstandard2.1\TokoApp.DataAccessLibrary.AssemblyInfo.cs
+E:\Ecep\Project\Projek C#\Blazor\Toko\Toko\TokoApp.DataAccessLibrary\obj\Debug\netstandard2.1\TokoApp.DataAccessLibrary.csproj.CoreCompileInputs.cache
+E:\Ecep\Project\Projek C#\Blazor\Toko\Toko\TokoApp.DataAccessLibrary\obj\Debug\netstandard2.1\TokoApp.DataAccessLibrary.csproj.CopyComplete
+E:\Ecep\Project\Projek C#\Blazor\Toko\Toko\TokoApp.DataAccessLibrary\obj\Debug\netstandard2.1\TokoApp.DataAccessLibrary.dll
+E:\Ecep\Project\Projek C#\Blazor\Toko\Toko\TokoApp.DataAccessLibrary\obj\Debug\netstandard2.1\TokoApp.DataAccessLibrary.pdb

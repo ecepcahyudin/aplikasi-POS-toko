@@ -1,0 +1,21 @@
+﻿@page "/"
+
+@inject AppState AppState
+
+    <div class="row" style="margin-left:-14px">
+        <h3>Assalamualaikum!</h3>
+
+        Saya Aplikasi Toko, siap membantu Anda.
+
+    </div>
+
+@*<SurveyPrompt Title="How is Blazor working for you?" />*@
+
+
+@code{      
+
+    protected override void OnInitialized()
+    {
+        AppState.SetComponentTitle("Home");
+    }
+}

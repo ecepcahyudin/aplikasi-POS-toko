@@ -1,0 +1,64 @@
+﻿@page "/masterBarang"
+
+@using TokoApp.Shared.Models
+
+<div class="row">
+
+
+    <RadzenTextBox Placeholder="Nama Barang" @bind-Value="data.NamaBarang" Style="margin-right:5px;margin-bottom:5px">
+    </RadzenTextBox>
+
+    <RadzenDropDown AllowClear="true" @bind-Value="data.KdSatuan"
+                    TValue="int?"
+                    Name="Satuan"
+                    Data="@satuans"
+                    TextProperty="NamaSatuan" ValueProperty="KdSatuan"
+                    FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive"
+                    AllowFiltering="true"
+                    Placeholder="Satuan" Style="margin-right:5px;margin-bottom:5px"/>
+
+
+    <RadzenLabel Text="Status"></RadzenLabel>
+    <RadzenCheckBox TValue="bool" @bind-Value="data.Status" Style="margin-right:10px;margin-bottom:5px"></RadzenCheckBox>
+
+    <RadzenButton Click="SaveAsync" Icon="save" Text="Simpan" Style="margin-right:5px;margin-bottom:5px"></RadzenButton>
+    <RadzenButton Click="Cancel" Icon="save" Text="Batal" Style="margin-right:5px;margin-bottom:5px"></RadzenButton>
+
+</div>
+
+<div class="row">
+    <RadzenGrid AllowFiltering="true" AllowPaging="true" PageSize="3" AllowSorting="true"
+                EditMode="DataGridEditMode.Single" Data="barangs" TItem="MasterBarangViewModel" ColumnWidth="100px">
+        <Columns>
+            <RadzenGridColumn TItem="MasterBarangViewModel" Property="KdBarang" Title="KdBarang" Width="60px">
+
+            </RadzenGridColumn>
+
+            <RadzenGridColumn TItem="MasterBarangViewModel" Title="NamaBarang">
+                <Template Context="barang">
+                    <RadzenTextBox @bind-Value="barang.NamaBarang" Disabled="true"></RadzenTextBox>
+                </Template>
+            </RadzenGridColumn>
+
+            <RadzenGridColumn TItem="MasterBarangViewModel" Property="JmlBeli" Title="JmlBeli" Width="60px">
+                <Template Context="barang">
+                    <RadzenTextBox @bind-Value="barang.Satuan" Disabled="true"></RadzenTextBox>
+                </Template>
+            </RadzenGridColumn>
+
+
+            <RadzenGridColumn TItem="MasterBarangViewModel" Context="order" Bubble="false" Filterable="false" Sortable="false" TextAlign="TextAlign.Center" Width="35px">
+                <Template Context="barang">
+                    <RadzenButton ButtonStyle="ButtonStyle.Danger" Icon="close" Size="ButtonSize.Small" Click="@(args => DeleteAsync(barang.KdBarang))">
+                    </RadzenButton>
+                </Template>
+
+            </RadzenGridColumn>
+
+        </Columns>
+    </RadzenGrid>
+</div>
+
+@code {
+    
+}

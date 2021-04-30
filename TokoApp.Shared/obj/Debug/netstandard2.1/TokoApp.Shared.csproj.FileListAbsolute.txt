@@ -1,0 +1,18 @@
+E:\Ecep\Toko\Toko\TokoApp.Shared\bin\Debug\netstandard2.1\TokoApp.Shared.deps.json
+E:\Ecep\Toko\Toko\TokoApp.Shared\bin\Debug\netstandard2.1\TokoApp.Shared.dll
+E:\Ecep\Toko\Toko\TokoApp.Shared\bin\Debug\netstandard2.1\TokoApp.Shared.pdb
+E:\Ecep\Toko\Toko\TokoApp.Shared\obj\Debug\netstandard2.1\TokoApp.Shared.AssemblyInfoInputs.cache
+E:\Ecep\Toko\Toko\TokoApp.Shared\obj\Debug\netstandard2.1\TokoApp.Shared.AssemblyInfo.cs
+E:\Ecep\Toko\Toko\TokoApp.Shared\obj\Debug\netstandard2.1\TokoApp.Shared.csproj.CoreCompileInputs.cache
+E:\Ecep\Toko\Toko\TokoApp.Shared\obj\Debug\netstandard2.1\TokoApp.Shared.dll
+E:\Ecep\Toko\Toko\TokoApp.Shared\obj\Debug\netstandard2.1\TokoApp.Shared.pdb
+E:\Ecep\Toko\Toko\TokoApp.Shared\obj\Debug\netstandard2.1\TokoApp.Shared.csprojAssemblyReference.cache
+E:\Ecep\Project\Projek C#\Blazor\Toko\Toko\TokoApp.Shared\bin\Debug\netstandard2.1\TokoApp.Shared.deps.json
+E:\Ecep\Project\Projek C#\Blazor\Toko\Toko\TokoApp.Shared\bin\Debug\netstandard2.1\TokoApp.Shared.dll
+E:\Ecep\Project\Projek C#\Blazor\Toko\Toko\TokoApp.Shared\bin\Debug\netstandard2.1\TokoApp.Shared.pdb
+E:\Ecep\Project\Projek C#\Blazor\Toko\Toko\TokoApp.Shared\obj\Debug\netstandard2.1\TokoApp.Shared.csprojAssemblyReference.cache
+E:\Ecep\Project\Projek C#\Blazor\Toko\Toko\TokoApp.Shared\obj\Debug\netstandard2.1\TokoApp.Shared.AssemblyInfoInputs.cache
+E:\Ecep\Project\Projek C#\Blazor\Toko\Toko\TokoApp.Shared\obj\Debug\netstandard2.1\TokoApp.Shared.AssemblyInfo.cs
+E:\Ecep\Project\Projek C#\Blazor\Toko\Toko\TokoApp.Shared\obj\Debug\netstandard2.1\TokoApp.Shared.csproj.CoreCompileInputs.cache
+E:\Ecep\Project\Projek C#\Blazor\Toko\Toko\TokoApp.Shared\obj\Debug\netstandard2.1\TokoApp.Shared.dll
+E:\Ecep\Project\Projek C#\Blazor\Toko\Toko\TokoApp.Shared\obj\Debug\netstandard2.1\TokoApp.Shared.pdb

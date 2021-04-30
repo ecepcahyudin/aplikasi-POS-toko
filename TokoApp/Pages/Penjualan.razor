@@ -1,0 +1,173 @@
+﻿@page "/penjualan"
+
+@using TokoApp.Shared.Models
+
+@attribute [Authorize]
+
+<div class="row">
+
+    <RadzenButton Icon="add_circle_outline" Style="margin-bottom:10px" Text="Tambah" Click="@InsertRow"></RadzenButton>
+
+    <RadzenGrid @ref="penjualansGrid" AllowFiltering="true" AllowPaging="true" PageSize="3" AllowSorting="true"
+                EditMode="DataGridEditMode.Single" Data="penjualans" TItem="PenjualanViewModel"
+                RowUpdate="@OnUpdateRow" RowCreate="@OnCreateRow" ColumnWidth="100px">
+        <Columns>
+            <RadzenGridColumn TItem="PenjualanViewModel" Property="KdBarang" Title="KdBarang" Width="60px">
+                <EditTemplate Context="penjualan">
+                    <RadzenTextBox @bind-Value="penjualan.KdBarang" Disabled="true" Style="width:99%"></RadzenTextBox>
+                </EditTemplate>
+            </RadzenGridColumn>
+
+            <RadzenGridColumn TItem="PenjualanViewModel" Property="NamaBarang" Title="NamaBarang">
+                <EditTemplate Context="penjualan">
+                    @*<RadzenTextBox @bind-Value="penjualan.NamaBarang" Style="width:99%"></RadzenTextBox>*@
+
+                    <RadzenDropDownDataGrid Data="@barangs" SelectedItemChanged="@(args=>SelectedBarangChanged(penjualan, args))"
+                                            AllowFiltering="true" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" AllowClear="true"
+                                            @bind-Value=penjualan.KdBarang Placeholder="Select..." TextProperty="NamaBarang" ValueProperty="KdBarang"
+                                            Style="width:99%">
+                        <Columns>
+
+                            @*<RadzenDropDownDataGridColumn Property="KodeBarang" Title="KodeBarang" Width="100px" />*@
+                            <RadzenDropDownDataGridColumn Property="NamaBarang" Title="NamaBarang" Width="200px" />
+                            <RadzenDropDownDataGridColumn Property="Satuan" Title="Satuan" Width="100px" />
+
+                        </Columns>
+                    </RadzenDropDownDataGrid>
+                </EditTemplate>
+            </RadzenGridColumn>
+
+            <RadzenGridColumn TItem="PenjualanViewModel" Property="JmlBeli" Title="JmlBeli" Width="60px">
+                <EditTemplate Context="penjualan">
+                    <RadzenNumeric @bind-Value="penjualan.JmlBeli"></RadzenNumeric>
+                </EditTemplate>
+            </RadzenGridColumn>
+
+            <RadzenGridColumn TItem="PenjualanViewModel" Property="Satuan" Title="Satuan" Width="60px" />
+
+
+            <RadzenGridColumn TItem="PenjualanViewModel" Property="Harga" Title="Harga" Filterable="false" Width="75px">
+                <EditTemplate Context="penjualan">
+                    <RadzenNumeric @bind-Value="penjualan.Harga"></RadzenNumeric>
+                </EditTemplate>
+            </RadzenGridColumn>
+
+            <RadzenGridColumn TItem="PenjualanViewModel" Property="Diskon" Title="Diskon" Filterable="false" Width="75px">
+                <EditTemplate Context="penjualan">
+                    <RadzenNumeric @bind-Value="penjualan.Diskon"></RadzenNumeric>
+                </EditTemplate>
+
+                <FooterTemplate>
+                    <b>@String.Format(new System.Globalization.CultureInfo("id-ID"), "{0:C}", penjualans.Sum(o => o.Diskon))</b>
+                </FooterTemplate>
+            </RadzenGridColumn>
+
+            <RadzenGridColumn TItem="PenjualanViewModel" Property="Biaya" Title="Biaya" Filterable="false" Width="75px">
+
+                <FooterTemplate>
+                    <b>@String.Format(new System.Globalization.CultureInfo("id-ID"), "{0:C}", penjualans.Sum(o => o.Biaya))</b>
+                </FooterTemplate>
+            </RadzenGridColumn>
+
+            <RadzenGridColumn TItem="PenjualanViewModel" Property="JmlBayar" Title="JmlBayar" Filterable="false" Width="75px">
+
+                <FooterTemplate>
+                    <b>@String.Format(new System.Globalization.CultureInfo("id-ID"), "{0:C}", penjualans.Sum(o => o.JmlBayar))</b>
+                </FooterTemplate>
+            </RadzenGridColumn>
+
+            <RadzenGridColumn TItem="PenjualanViewModel" Bubble="false" Filterable="false"
+                              Sortable="false" TextAlign="TextAlign.Center" Width="50px">
+
+                <Template Context="penjualan">
+                    <RadzenButton Icon="edit" Size="ButtonSize.Small" Click="@(args=>EditRow(penjualan))"></RadzenButton>
+                </Template>
+
+                <EditTemplate Context="penjualan">
+                    <RadzenButton Icon="save" Size="ButtonSize.Small" Click="@(args=>SaveRow(penjualan))"></RadzenButton>
+                    <RadzenButton Icon="cancel" Size="ButtonSize.Small" ButtonStyle="ButtonStyle.Secondary" Click="@(args=>CancelEdit(penjualan))"></RadzenButton>
+                </EditTemplate>
+            </RadzenGridColumn>
+
+            <RadzenGridColumn TItem="PenjualanViewModel" Context="order" Bubble="false" Filterable="false" Sortable="false" TextAlign="TextAlign.Center" Width="35px">
+                <Template Context="order">
+                    <RadzenButton ButtonStyle="ButtonStyle.Danger" Icon="close" Size="ButtonSize.Small" Click="@(args => DeleteRow(order))">
+                    </RadzenButton>
+                </Template>
+                <EditTemplate Context="order">
+                    <RadzenButton ButtonStyle="ButtonStyle.Danger" Icon="close" Size="ButtonSize.Small" Click="@(args => DeleteRow(order))">
+                    </RadzenButton>
+                </EditTemplate>
+            </RadzenGridColumn>
+
+        </Columns>
+    </RadzenGrid>
+
+</div>
+
+
+<div class="row">
+    <RadzenButton Text="Batal" Click="Cancel" Style="margin-top:5px;margin-right:5px" Icon="cancel"></RadzenButton>
+    <RadzenButton Text="Bayar" Click="Bayar" Style="margin-top:5px" Icon="attach_money"></RadzenButton>
+</div>
+
+
+
+
+@code {
+
+    RadzenGrid<PenjualanViewModel> penjualansGrid;
+
+    //Klik tombol tambah
+    void InsertRow()
+    {
+        penjualansGrid.InsertRow(new PenjualanViewModel());
+    }
+
+    //Klik tombol edit di kolom
+    void EditRow(PenjualanViewModel data)
+    {
+        penjualansGrid.EditRow(data);
+    }
+
+    //Klik tombol batal add atau batal edit
+    void CancelEdit(PenjualanViewModel data)
+    {
+        penjualansGrid.CancelEditRow(data);
+    }
+
+    //Klik tombol save ketika add atau edit
+    void SaveRow(PenjualanViewModel data)
+    {
+        penjualansGrid.UpdateRow(data);
+    }
+
+    //Klik tombol delete di kolom
+    void DeleteRow(PenjualanViewModel data)
+    {
+        if (penjualans.Contains(data))
+        {
+            penjualans.Remove(data);
+            penjualansGrid.Reload();
+        }
+        else
+        {
+            penjualansGrid.CancelEditRow(data);
+        }
+    }
+
+    //Klik simpan ketika nambah baris baru->method SaveRow->Kemudian method ini
+    void OnCreateRow(PenjualanViewModel data)
+    {
+        //Ada bug, ketika simpan edit pada baris pertama, method OnCreateRow selalu dieksekusi
+        if (!penjualans.Contains(data))
+            penjualans.Add(data);
+
+    }
+
+    //Klik simpan edit->method SaveRow->Kemudian method ini
+    void OnUpdateRow(PenjualanViewModel data)
+    {
+
+    }
+}

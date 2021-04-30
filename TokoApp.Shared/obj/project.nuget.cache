@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZuPt24RPyNlVvvBMCcD8/SB99da1XAlEI99BgimPB1gbA/c22rQxStbJddf2URttxXR8PE5ckIT7yZnqy2r2jw==",
+  "success": true,
+  "projectFilePath": "E:\\Ecep\\Project\\Projek C#\\Blazor\\Toko\\Toko\\TokoApp.Shared\\TokoApp.Shared.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ecep\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

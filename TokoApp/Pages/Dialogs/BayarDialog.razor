@@ -1,0 +1,101 @@
+﻿@using System.Globalization;
+
+@inject Radzen.DialogService dialogService
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-5">
+                <RadzenLabel Text="Jumlah Harus Dibayar"></RadzenLabel>
+            </div>
+
+            <div class="col-md-7" >
+                <RadzenTextBox Disabled="true"  Value="@String.Format(new System.Globalization.CultureInfo("id-ID"), "{0:C}",JmlHarudDibayar)" style="font-weight:bold">
+                    
+                </RadzenTextBox>
+            </div>
+            
+        </div>
+
+        <div class="row">
+            <div class="col-md-5">
+                <RadzenLabel Text="Jumlah Uang Diterima"></RadzenLabel>
+            </div>
+
+            <div class="col-md-7">
+                <RadzenNumeric @bind-Value="@JmlDiterima" style="font-weight:bold"></RadzenNumeric>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-5">
+                <RadzenLabel Text="Kembalian"></RadzenLabel>
+            </div>
+
+            <div class="col-md-7">
+                <RadzenTextBox @bind-Value="@Kembalian" Disabled="true" style="font-weight:bold">
+
+                </RadzenTextBox>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<br />
+<div class="row">
+    <div class="col-md-12">
+        <RadzenButton Click="OkClicked" Text="OK" Style="margin-bottom: 10px; width: 150px" />
+        <RadzenButton Click="@((args) => dialogService.Close(false))" ButtonStyle="ButtonStyle.Secondary" Text="Cancel" Style="margin-bottom: 10px; width: 150px" />
+    </div>
+</div>
+
+@code {
+    [Parameter] public int JmlHarudDibayar { get; set; }
+    [Inject] NotificationService NotificationService { get; set; }
+
+    private int JmlDiterima { get; set; }
+
+    private string Kembalian {
+
+        get {
+            return String.Format
+                (new CultureInfo("id-ID"), "{0:C}", (JmlDiterima- JmlHarudDibayar)<0?0:(JmlDiterima - JmlHarudDibayar));
+        }
+
+        set
+        {
+
+        }
+
+    }
+
+    async void OkClicked()
+    {
+        if (JmlDiterima >= JmlHarudDibayar)
+        {
+            dialogService.Close(true);
+        }
+        else
+        {
+            await ShowNotification(
+                        new NotificationMessage()
+                        {
+                            Severity = NotificationSeverity.Info,
+                            Summary = "Jumlah diterima kurang!",
+                            Detail = "",
+                            Duration = 4000
+                        }
+                    );
+        }
+
+    }
+
+    async Task ShowNotification(NotificationMessage message)
+    {
+        NotificationService.Notify(message);
+
+        await InvokeAsync(() => { StateHasChanged(); });
+    }
+}
